@@ -1,4 +1,6 @@
 
+//  REQUIRED / MIN MAX / PATTERN EMAIL MOBILE  / EXT  / UPLOAD SIZE MB  / 
+
 function reg_form(str)
 {
 	if(str.uname.value=="")
@@ -8,6 +10,12 @@ function reg_form(str)
 	return false;
 	}
 	
+	/*
+		match(/^[a-zA-Z]+$/) ALPHA
+		match(/^[a-zA-Z]{1,16}$/) ALPHA WITH MIN max
+		match(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,3})+$/)) Email
+		match(/^([0-9]+$/)) MOBILE /PIN / PINCODE /AMMOUT
+	*/
 	if(!str.uname.value.match(/^[a-zA-Z]{1,}$/))
 	{
 	document.getElementById("msg1").innerHTML="! Please enter Only Character Value";
@@ -164,30 +172,29 @@ function reg_form(str)
 		if(ext=="jpg" || ext=="png" || ext=="jpeg" || ext=="gif" || ext=="JPG" || 
 		ext=="PNG" || ext=="JPEG" || ext=="GIF")
 		{
-		document.getElementById("msg1").innerHTML="";
-		document.getElementById("submit").disabled=false;
+			document.getElementById("msg1").innerHTML="";
+			document.getElementById("submit").disabled=false;
 		}
 		else
 		{
-		document.getElementById("msg1").innerHTML="! Please upload only JPG , GIF , JPEG File";
-		document.getElementById("submit").disabled=true;
+			document.getElementById("msg1").innerHTML="! Please upload only JPG , GIF , JPEG File";
+			document.getElementById("submit").disabled=true;
 		}
 	} 
 	
-	//below function is for image validation
 	function check1(file)
 	{
 	
 	var filename=file.value;
 	var ext=filename.substring(filename.lastIndexOf('.')+1);
-		if(ext=="PDF" || ext=="")
+		if(ext=="pdf" || ext=="PDF")
 		{
-		document.getElementById("msg1").innerHTML="";
-		document.getElementById("submit").disabled=false;
+			document.getElementById("msg1").innerHTML="";
+			document.getElementById("submit").disabled=false;
 		}
 		else
 		{
-		document.getElementById("msg1").innerHTML="! Please upload only JPG , GIF , JPEG File";
-		document.getElementById("submit").disabled=true;
+			document.getElementById("msg1").innerHTML="! Please upload only PDF File";
+			document.getElementById("submit").disabled=true;
 		}
 	} 

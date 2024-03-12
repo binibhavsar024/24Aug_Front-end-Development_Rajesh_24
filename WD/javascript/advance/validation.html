@@ -76,19 +76,20 @@ function validate1(argu)
 		argu.username.focus();
 		return false;
 	}
-	if(argu.pass.value=="")
+	if(argu.password.value=="")
 	{
 		document.getElementById("msg").innerHTML="Password field is required";
-		argu.pass.focus();
+		argu.password.focus();
 		return false;
 	}
+	
 }
 
 </script>
 
 
         <h4 align="center" style="color:red" id="msg"></h4>                            
-		<form  name="myform2" action="" method="post" onsubmit="return validate1(this)">
+		<form action="" method="post" onsubmit="return validate1(this)">
 			<table border="2" align="center" >
             	<tr>
                 	<th> Registration Page </th>
