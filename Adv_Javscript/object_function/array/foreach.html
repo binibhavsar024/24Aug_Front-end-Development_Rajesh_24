@@ -15,6 +15,13 @@ for (i=0;i<emp.length;i++)
 document.write(emp[i] + "<br/>");  
 }  
 
+// loop by for of
+var emp=["Sonoo","Vimal","Ratan"];  
+for (var e of emp)
+{  
+document.write(e + "<br/>");  
+}  
+
 
 // using forEach for array loop 	
 students.forEach((value,index)=>{ document.write(`<h1>${value} : ${index}</h1>`)});
@@ -32,11 +39,6 @@ students.map((value,index)=>{ document.write(`<h1>${value} : ${index}</h1>`)});
 students_no=[21,65,45,20,50];
 
 document.write(students_no.filter((value,index)=>{ return value>25}) + "<br>");
-
-
-
-
-
 
 
 //The JavaScript array every() method checks whether all the given elements in an array are satisfying the provided condition
